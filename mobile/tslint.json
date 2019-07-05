@@ -1,0 +1,38 @@
+{
+  "defaultSeverity": "error",
+  "extends": [
+    "tslint-config-airbnb",
+    "tslint-react"
+  ],
+  "rules": {
+    "import-name": [
+      false
+    ],
+    "variable-name": [
+      true,
+      "ban-keywords",
+      "check-format",
+      "allow-pascal-case"
+    ],
+    "interface-name": [
+      true,
+      "never-prefix"
+    ],
+    "jsx-boolean-value": [
+      "error",
+      "never"
+    ],
+    "jsx-no-multiline-js": [
+      "error",
+      "never"
+    ],
+    "quotemark": [
+      true,
+      "single",
+      "avoid-escape",
+      "avoid-template"
+    ],
+    "ordered-imports": false,
+    "object-literal-sort-keys": false
+  }
+}

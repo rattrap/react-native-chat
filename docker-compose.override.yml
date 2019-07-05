@@ -1,0 +1,20 @@
+version: '3'
+services:
+  parse:
+    ports:
+     - "1337:1337"
+  parse_dashdoard:
+    ports:
+     - "4040:4040"
+  mongo:
+    ports:
+     - "27017:27017"
+  server:
+    build:
+      context: server
+    command: npm run start:dev
+    ports:
+     - "3000:3000"
+     - "9229:9229"
+    volumes:
+     - "./server:/usr/src/app"

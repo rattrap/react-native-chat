@@ -1,0 +1,15 @@
+version: '3'
+services:
+  parse:
+    image: "parseplatform/parse-server:latest"
+    command: --appId $APPLICATION_ID --masterKey $MASTER_KEY --databaseURI $DATABASE_URI --startLiveQueryServer
+    env_file: .env
+  parse_dashdoard:
+    image: "parseplatform/parse-dashboard:latest"
+    command: --dev --appId $APPLICATION_ID --masterKey $MASTER_KEY --serverURL $PARSE_SERVER_URL --appName local
+    env_file: .env
+  mongo:
+    image: "mongo:3.2"
+    env_file: .env
+  server:
+    env_file: .env
